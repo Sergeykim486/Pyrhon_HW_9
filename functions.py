@@ -29,6 +29,7 @@ def botstep(score):
         take = score['tab']
     else:
         take = random.randint(1, 28)
+    print(f'BOT take {take} candys')
     score['bot'] = score['bot'] + take + score['player']
     score['tab'] = score['tab'] - take
     score['player'] = 0
