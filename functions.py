@@ -21,7 +21,7 @@ def newgamebuttons(candys, score):
     return mark
 
 def showscore(score):
-    res = 'СЧЕТ:\n\nИгрок - ' + str(score['player']) + '\nНа столе - ' + str(score['tab']) + '\nБот - ' + str(score['bot'])
+    res = 'СЧЕТ:\n\nИгрок - 🍭' + str(score['player']) + '\nНа столе - 🍭' + str(score['tab']) + '\nБот - 🍭' + str(score['bot'])
     return res
 
 def botstep(score):
@@ -29,7 +29,7 @@ def botstep(score):
         take = score['tab']
     else:
         take = random.randint(1, 28)
-    print(f'BOT take {take} candys')
+    print(f'{score}  -  BOT take {take} candys')
     score['bot'] = score['bot'] + take + score['player']
     score['tab'] = score['tab'] - take
     score['player'] = 0
